@@ -1,0 +1,92 @@
+/* Boje koje su korišćene za realizaciju prikazanog primera su:
+
+na krugu - #fb5dad, #55fb9f, #b97aff;
+boja pozadine - #050210. */
+
+body {
+  background-color: #050210;
+}
+
+.circle {
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(#fb5dad, #55fb9f, #b97aff);
+  border-radius: 50%;
+  margin: 200px auto;
+  position: relative;
+  animation: animate 1s linear infinite;
+}
+
+.circle::after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  bottom: 20px;
+  left: 20px;
+  border-radius: 50%;
+  background-color: #050210;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.glow {
+  background: linear-gradient(#fb5dad, #55fb9f, #b97aff);
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  filter: blur(20px);
+}
+
+/* .black {
+  content: "";
+  width: 270px;
+  height: 270px;
+  border-radius: 50%;
+  background-color: #131212;
+  animation: grow 1s infinite;
+} 
+
+@keyframes grow {
+  0% {
+    transform: scale(0);
+  }
+  10% {
+    transform: scale(0.1);
+  }
+  20% {
+    transform: scale(0.2);
+  }
+  30% {
+    transform: scale(0.3);
+  }
+  40% {
+    transform: scale(0.4);
+  }
+  50% {
+    transform: scale(0.5);
+  }
+  60% {
+    transform: scale(0.6);
+  }
+  70% {
+    transform: scale(0.7);
+  }
+  80% {
+    transform: scale(0.8);
+  }
+  90% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
